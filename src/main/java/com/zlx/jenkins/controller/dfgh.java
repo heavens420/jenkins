@@ -6,8 +6,8 @@ package com.zlx.jenkins.controller;
  * @Version 1.0
  * @Desc
  */
-public class ooo {
+public class dfgh {
     public static void main(String[] args) {
-        System.out.println("111111111111");
+
     }
 }
