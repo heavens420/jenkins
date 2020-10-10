@@ -43,6 +43,50 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <configuration>
+                    <dockerHost>http://192.168.11.129:2375</dockerHost>
+                    <imageName>heavens420/${project.artifactId}</imageName>
+                    <imageTags>
+                        <imageTag>${project.version}</imageTag>
+                    </imageTags>
+                    <forceTags>true</forceTags>
+                    <dockerDirectory>${project.basedir}</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>2.2.0</version>
+                <configuration>
+                    <from>
+                        <image>openjdk:alpine</image>
+                    </from>
+                    <to>
+                        <image>docker.io/heavens420/jenkins-jib</image>
+                        <tags>
+                            <tag>v1</tag>
+                        </tags>
+                        <auth>
+                            <!--自动推送到dockerhub服务器-->
+                            <username>heavens420</username>
+                            <password>mnnmnnbaby223</password>
+                        </auth>
+                    </to>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
