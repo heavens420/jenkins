@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BaseController {
 
-    String str = "hello jenkins";
+    String str = "hello jenkins 8";
 
     @RequestMapping("/")
     public String goPage1(){
