@@ -1,6 +1,5 @@
 package com.zlx.jenkins.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BaseController {
 
-    String str = "hello jenkins 8";
+    String str = "hello jenkins 88";
 
     @RequestMapping("/")
     public String goPage1(){
