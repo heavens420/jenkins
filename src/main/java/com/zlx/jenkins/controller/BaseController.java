@@ -19,4 +19,11 @@ public class BaseController {
     public String goPage1(){
         return str;
     }
+
+    public static void main(String[] args) {
+        double a = Math.pow(16, 17);
+        double b = Math.pow(17, 16);
+
+        System.out.println(a < b);
+    }
 }
