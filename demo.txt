@@ -1,3 +1,0 @@
-dev v2
-bug v2
-master v2
