@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BaseController {
 
-    String str = "hello jenkins 88 p2";
+    String str = "hello jenkins 88 p2 p1";
     String str2 = "hello jenkins 88";
 
     @RequestMapping("/")
